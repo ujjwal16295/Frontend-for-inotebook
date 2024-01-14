@@ -7,6 +7,9 @@ export const AddNote = (props) => {
     const {addNote}=context
     const [note,setNote]=useState({title:"",description:"",tag:""})
     const handleclick=()=>{
+      console.log(note.title)
+      console.log(note.tag)
+      console.log(note.description)
         addNote(note.title,note.description,note.tag)
         props.showAlert("added succesfully","success")
     }
